@@ -285,6 +285,7 @@ function MoveToNextTab()
 endfunc
 "}}}
 " Indexed tabs{{{
+" From: https://superuser.com/questions/331272/vim-show-the-index-of-tabs-in-the-tabline
 set tabline=%!MyTabLine()
 function MyTabLine()
         let s = '' " complete tabline goes here
