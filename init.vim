@@ -357,7 +357,7 @@ function MyTabLine()
         return s
 endfunction
 "}}}
-nnoremap <leader>t gt
+"nnoremap <leader>t gt
 
 nnoremap <A-.> :call MoveToNextTab()<CR>
 nnoremap <A-,> :call MoveToPrevTab()<CR>
