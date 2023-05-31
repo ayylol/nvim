@@ -206,6 +206,8 @@ nnoremap <leader>e :NvimTreeToggle<CR>
 " }}}
 " Colors {{{
 
+syntax keyword Todo TODO README FIXME TEST
+
 function Recolor()
     syntax enable
     colorscheme moonfly
