@@ -205,9 +205,6 @@ nnoremap <leader>e :NvimTreeToggle<CR>
 
 " }}}
 " Colors {{{
-
-syntax keyword Todo TODO README FIXME TEST
-
 function Recolor()
     syntax enable
     colorscheme moonfly
@@ -218,7 +215,6 @@ function Recolor()
 endfunc
 
 call Recolor()
-
 "}}}
 " Tabs{{{
 function SetTabs(tabsize)
