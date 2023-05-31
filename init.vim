@@ -99,6 +99,10 @@ lua vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
 lua vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
 lua vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
 lua vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
+lua vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, opts)
+lua vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
+lua vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
+lua vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
 "}}}
 " Nonsense from cmp {{{
 lua <<EOF
