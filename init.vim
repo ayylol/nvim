@@ -167,6 +167,7 @@ lua <<EOF
   require('lspconfig')['clangd'].setup {
     capabilities = capabilities
   }
+  require'lspconfig'.texlab.setup{}
 EOF
 "}}}
 
