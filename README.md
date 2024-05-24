@@ -1,4 +1,9 @@
 # nvim
+My nvim config :3
 
 ## Todo:
-- [ ] Switch to Lua
+- [X] Switch to Lua
+- [ ] Add plugin manager
+- [ ] Get working lsp
+- [ ] Get working fuzzy finder
+- [ ] Other nice to have plugins
