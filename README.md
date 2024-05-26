@@ -6,4 +6,6 @@ My nvim config :3
 - [ ] Add plugin manager
 - [ ] Get working lsp
 - [X] Get working fuzzy finder
+- [ ] Add Indexed Tabs
+- [ ] Better Color Scheme
 - [ ] Other nice to have plugins
