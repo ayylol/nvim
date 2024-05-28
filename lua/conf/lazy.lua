@@ -16,4 +16,5 @@ require("lazy").setup({
     -- Or tag = 0.1.x
     {'nvim-telescope/telescope.nvim', tag = '0.1.8',
     dependencies = { 'nvim-lua/plenary.nvim' } },
+    {'bluz71/vim-moonfly-colors'},
 })
