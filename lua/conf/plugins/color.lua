@@ -9,6 +9,7 @@ return {
       vim.cmd('hi ColorColumn guibg=#ff5454')
       vim.cmd('hi CursorLineNr guifg=#e3c78a')
       vim.cmd('hi LineNr guibg=NONE')
+      vim.cmd('hi SignColumn guibg=NONE')
       -- vim.cmd('hi Comment guifg=grey')
       -- vim.cmd('hi Folded guifg=grey')
       vim.cmd('hi Normal guibg=NONE')
