@@ -5,6 +5,7 @@ vim.opt.scrolloff=8
 vim.opt.colorcolumn="80"
 vim.opt.incsearch=true
 vim.opt.cursorline=true
+vim.wo.signcolumn="yes"
 
 vim.opt.filetype="on"
 vim.opt.syntax="on"
