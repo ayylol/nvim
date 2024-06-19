@@ -1,6 +1,7 @@
 -- leader key
 vim.keymap.set("", " ", "<nop>")
 vim.g.mapleader=" "
+vim.g.maplocalleader=","
 
 -- netrw
 vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
