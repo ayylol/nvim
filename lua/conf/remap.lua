@@ -53,3 +53,5 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 vim.keymap.set("n", "<leader>p", "o<esc>\"+p")
 vim.keymap.set("v", "<leader>p", "o<esc>\"+p")
 vim.keymap.set("n", "<leader>P", "o<esc>\"+P")
+
+vim.keymap.set("v", "<leader>aa", "\"zy:let @z=system(\"clang-format\",@z)<CR>gv\"zp")
