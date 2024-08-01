@@ -5,6 +5,8 @@ return {
     "hrsh7th/cmp-nvim-lsp",
   },
   config = function()
+    -- Turn off diagnostics
+    vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end
     local lspconfig = require("lspconfig")
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
     local keymap = vim.keymap
