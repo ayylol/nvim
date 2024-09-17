@@ -6,6 +6,10 @@ vim.g.maplocalleader=","
 -- netrw
 vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 
+-- Tab navigation
+vim.keymap.set("n", "<leader>j", "gt")
+vim.keymap.set("n", "<leader>k", "gT")
+
 -- Split navigation
 vim.keymap.set("n", "<C-j>", "<C-w>j")
 vim.keymap.set("n", "<C-k>", "<C-w>k")
