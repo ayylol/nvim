@@ -11,6 +11,7 @@ vim.opt.mouse=""
 vim.opt.filetype="on"
 vim.opt.syntax="on"
 vim.opt.wrap=false
+vim.opt.swapfile=false
 
 vim.opt.shortmess:append({ S = false })
 
