@@ -3,7 +3,6 @@ return {
   dependencies = { "luarocks.nvim" },
   version = "*",
   config = function()
-    --[[
     local neorg = require("neorg")
     neorg.setup({
       load = {
@@ -20,6 +19,5 @@ return {
       }
     })
     vim.keymap.set("n", "<leader>nn", ":Neorg<cr>")
-    ]]-- 
   end,
 }

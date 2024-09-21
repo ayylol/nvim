@@ -7,6 +7,7 @@ vim.g.maplocalleader=","
 vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 
 -- Tab navigation
+vim.keymap.set("n", "gt", "<nop>")
 vim.keymap.set("n", "<leader>k", "gt")
 vim.keymap.set("n", "<leader>j", "gT")
 
