@@ -48,8 +48,9 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Copy Paste 
 -- Paste over without overwriting buffer
-vim.keymap.set("x", "<leader>x", "\"0p")
-vim.keymap.set("n", "<leader>x", "\"_ddkp")
+vim.keymap.set("x", "p", [["_dP]])
+vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+vim.keymap.set({"n", "v"}, "d", [[d]]) -- cut
 
 -- Copy/Paste from clipboard
 vim.keymap.set("n", "<leader>y", "\"+y")
