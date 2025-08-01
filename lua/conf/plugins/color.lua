@@ -14,6 +14,7 @@ return {
       -- vim.cmd('hi Folded guifg=grey')
       vim.cmd('hi Normal guibg=NONE')
       -- TSEnable highlight
+      vim.cmd('TSEnable highlight')
     end
     Recolor()
   end,
