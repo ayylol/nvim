@@ -2,10 +2,7 @@
 My nvim config :3
 
 ## Todo:
-- [X] Switch to Lua
-- [X] Add plugin manager
-- [X] Get working lsp
-- [X] Get working fuzzy finder
+- [ ] Use commit hashes instead of branch names for plugins
 - [ ] Add Indexed Tabs
-- [X] Better Color Scheme
-- [ ] Other nice to have plugins
+- [ ] Learn to use orgmode
+- [ ] Fix rest of TODO tags

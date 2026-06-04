@@ -3,9 +3,6 @@ vim.keymap.set("", " ", "<nop>")
 vim.g.mapleader=" "
 vim.g.maplocalleader=","
 
--- netrw
-vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
-
 -- Tab navigation
 vim.keymap.set("n", "gt", "<nop>")
 vim.keymap.set("n", "<leader>k", "gt")
@@ -64,3 +61,33 @@ vim.keymap.set("n", "<leader>P", "o<esc>\"+P")
 vim.keymap.set("v", "<leader>aa", "\"zy:let @z=system(\"clang-format\",@z)<CR>gv\"zp")
 
 vim.keymap.set("v", "<leader>ss", "mz\"zy:silent g `<C-r>z<CR>'z")
+
+-- netrw
+vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
+
+-- Telescope
+local telescope_bi = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', telescope_bi.find_files, {})
+vim.keymap.set('n', '<leader>fr', telescope_bi.oldfiles, {})
+vim.keymap.set('n', '<leader>fs', telescope_bi.live_grep, {})
+vim.keymap.set('n', '<leader>fc', telescope_bi.grep_string, {})
+vim.keymap.set('n', '<leader>fb', telescope_bi.buffers, {})
+vim.keymap.set('n', '<leader>fh', telescope_bi.help_tags, {})
+
+-- LSP
+-- TODO: use <leader>l as a prefix for all LSP commands
+-- TODO: change telescope diagnostics and lsp restart commands
+vim.keymap.set("n", "gR", telescope_bi.lsp_references, {}) -- show definition, references
+vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {}) -- go to declaration
+vim.keymap.set("n", "gd", telescope_bi.lsp_definitions, {}) -- show lsp definitions
+vim.keymap.set("n", "gi", telescope_bi.lsp_implementations, {}) -- show lsp implementations
+vim.keymap.set("n", "gt", telescope_bi.lsp_type_definitions, {}) -- show lsp type definitions
+vim.keymap.set({"n","v"}, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
+vim.keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
+vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts) -- show diagnostics for line
+vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
+vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts) -- jump to next diagnostic in buffer
+vim.keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
+vim.keymap.set("n", "<leader>rs", ":lsp restart<CR>", opts) -- mapping to restart lsp if necessary
+
