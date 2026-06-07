@@ -50,6 +50,7 @@ tabline.setup({
     brackets = { '[', ']' },     -- file name brackets surrounding
     inactive_tab_max_length = 0  -- max length of inactive tab titles, 0 to ignore
 })
+vim.opt.showtabline = 2
 
 -- Orgmode
 local orgmode = require('orgmode')
