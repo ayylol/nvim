@@ -57,6 +57,7 @@ local orgmode = require('orgmode')
 orgmode.setup({
       org_agenda_files = '~/Documents/notes/**/*',
       org_default_notes_file = '~/Documents/notes/refile.org',
+      org_startup_folded= 'showeverything',
 })
 
 -- Telescope startup
