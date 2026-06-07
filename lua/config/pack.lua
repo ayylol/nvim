@@ -26,6 +26,10 @@ vim.pack.add({
 { src=gh('bluz71/vim-moonfly-colors'),
   name='color-scheme', version='master'},
 
+-- Tabline
+{ src=gh('crispgm/nvim-tabline'),
+  name='tabline', version='main'},
+
 -- Telescope
 { src=gh('nvim-lua/plenary.nvim'),
   name='plenary', version='master'},
