@@ -5,14 +5,14 @@ vim.g.maplocalleader=","
 
 -- Tab navigation
 vim.keymap.set("n", "gt", "<nop>")
-vim.keymap.set("n", "<leader>k", "gt")
-vim.keymap.set("n", "<leader>j", "gT")
+vim.keymap.set("n", "<leader>k", "gt", { desc = "next tab"})
+vim.keymap.set("n", "<leader>j", "gT", { desc = "prev tab"})
 
 -- Split navigation
-vim.keymap.set("n", "<C-j>", "<C-w>j")
-vim.keymap.set("n", "<C-k>", "<C-w>k")
-vim.keymap.set("n", "<C-l>", "<C-w>l")
-vim.keymap.set("n", "<C-h>", "<C-w>h")
+vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "down split"})
+vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "up split"})
+vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "right split"})
+vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "left split"})
 
 -- Split resizing
 vim.keymap.set("n", "<leader>=", ":resize +2<CR>", {silent=true})
@@ -73,6 +73,7 @@ vim.keymap.set('n', '<leader>fs', telescope_bi.live_grep, {})
 vim.keymap.set('n', '<leader>fc', telescope_bi.grep_string, {})
 vim.keymap.set('n', '<leader>fb', telescope_bi.buffers, {})
 vim.keymap.set('n', '<leader>fh', telescope_bi.help_tags, {})
+vim.keymap.set('n', '<leader>fk', telescope_bi.keymaps, {})
 
 -- LSP
 -- TODO: use <leader>l as a prefix for all LSP commands

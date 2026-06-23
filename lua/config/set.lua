@@ -2,7 +2,7 @@ vim.opt.number=true
 vim.opt.relativenumber=true
 
 vim.opt.scrolloff=8
-vim.opt.colorcolumn="80"
+vim.opt.colorcolumn="100"
 vim.opt.incsearch=true
 vim.opt.cursorline=true
 vim.wo.signcolumn="no"
@@ -68,8 +68,10 @@ telescope.setup({
 telescope.load_extension('fzf')
 
 -- LSP
--- TODO: Check gdscript
 vim.lsp.enable({'clangd'})
-vim.lsp.enable({'gdscript'})
+--vim.lsp.enable({'gdscript'}) -- TODO: Check
+vim.lsp.enable({'ols'})
+vim.lsp.enable({'zls'})
+
 -- turn off diagnostics
 vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end
