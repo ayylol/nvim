@@ -65,7 +65,11 @@ local telescope = require('telescope')
 telescope.setup({
   defaults = { },
 })
-telescope.load_extension('fzf')
+
+if (os.execute('which fzf') == 0)
+then
+  telescope.load_extension('fzf')
+end
 
 -- LSP
 vim.lsp.enable({'clangd'})
