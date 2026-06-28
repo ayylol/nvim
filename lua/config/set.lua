@@ -53,19 +53,32 @@ tabline.setup({
 vim.opt.showtabline = 2
 
 -- Orgmode
+notes_dir = '~/Documents/Notes'
 local orgmode = require('orgmode')
 orgmode.setup({
-      org_agenda_files = '~/Documents/notes/**/*',
-      org_default_notes_file = '~/Documents/notes/refile.org',
+      org_agenda_files = notes_dir..'/**/*',
+      org_default_notes_file = notes_dir..'/refile.org',
       org_startup_folded= 'showeverything',
+      org_capture_templates = {
+        -- TODO: Make this capture work so it automatically grabs the files in logs dir
+        t = {
+            description = "Project todos",
+            -- TODO: add tags as options
+            template = "* TODO %^{TITLE|} :%^{TAGS|misc}:\n%?",
+            target = notes_dir..'/todos/%^{file|todo.org|tree.org|graphics.org|gamedev.org|compilers.org}',
+            datetree = {
+              tree_type = 'day',
+            }
+        }
+      }
 })
+
 
 -- Telescope startup
 local telescope = require('telescope')
 telescope.setup({
   defaults = { },
 })
-
 if (os.execute('which fzf') == 0)
 then
   telescope.load_extension('fzf')
