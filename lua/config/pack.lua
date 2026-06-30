@@ -23,26 +23,37 @@ vim.api.nvim_create_autocmd("PackChanged", {
 -- TODO: use version tags instead of branch names so its more stable
 vim.pack.add({
 -- Color Scheme
-{ src=gh('bluz71/vim-moonfly-colors'),
+{ src=gh 'bluz71/vim-moonfly-colors',
   name='color-scheme', version='master'},
+{ src=gh 'folke/todo-comments.nvim',
+  name='todo-comments', version='main'},
+
 
 -- Tabline
-{ src=gh('crispgm/nvim-tabline'),
+{ src=gh 'crispgm/nvim-tabline',
   name='tabline', version='main'},
 
 -- Telescope
-{ src=gh('nvim-lua/plenary.nvim'),
+{ src=gh 'nvim-lua/plenary.nvim',
   name='plenary', version='master'},
-{ src=gh('nvim-telescope/telescope-fzf-native.nvim'),
+{ src=gh 'nvim-telescope/telescope-fzf-native.nvim',
   name='fzf-native', version='main', data={build="make"}},
-{ src=gh('nvim-telescope/telescope.nvim'),
+{ src=gh 'nvim-telescope/telescope.nvim',
   name='telescope', version='master'},
 
 -- LSP
-{ src=gh('neovim/nvim-lspconfig'),
+{ src=gh 'neovim/nvim-lspconfig',
   name='lspconfig', version='master'},
 
+-- Completion Engine
+{ src=gh 'L3MON4D3/LuaSnip',
+  name='luasnip', version='master'},
+{ src=gh 'saghen/blink.lib',
+  name='blinklib', version='main'},
+{ src=gh 'saghen/blink.cmp',
+  name='blink', version='main'},
+
 -- Orgmode
-{ src=gh('nvim-orgmode/orgmode'),
+{ src=gh 'nvim-orgmode/orgmode',
   name='orgmode', version='master'},
 })

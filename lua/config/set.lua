@@ -34,6 +34,7 @@ function Recolor()
   vim.cmd('hi LineNr guibg=NONE')
   vim.cmd('hi SignColumn guibg=NONE')
   vim.cmd('hi Normal guibg=NONE')
+  require('todo-comments').setup { signs = false }
 end
 Recolor()
 
@@ -89,6 +90,18 @@ vim.lsp.enable({'clangd'})
 --vim.lsp.enable({'gdscript'}) -- TODO: Check
 vim.lsp.enable({'ols'})
 vim.lsp.enable({'zls'})
+
+-- Completion Engine
+require('blink.cmp').setup({
+    keymap = { preset = 'default', },
+    appearance = { nerd_font_variant = 'mono', },
+    completion = { documentation = { auto_show = false, auto_show_delay_ms = 500 }, },
+    sources = { default = { 'lsp', 'path', 'snippets' }, },
+    snippets = { preset = 'luasnip' },
+    -- TODO: change to rust
+    fuzzy = { implementation = 'lua' },
+    signature = { enabled = true },
+})
 
 -- turn off diagnostics
 vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end
