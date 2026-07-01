@@ -92,3 +92,10 @@ vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts) -- jump to next diagno
 vim.keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
 vim.keymap.set("n", "<leader>rs", ":lsp restart<CR>", opts) -- mapping to restart lsp if necessary
 
+-- Autorun go.sh
+-- TODO: Assumes nvim is in the dir with go.sh, do something to look up dirs
+function EZlaunch()
+  local cwd = vim.fn.getcwd(0)
+  os.execute(cwd.."/go.sh > /dev/null 2>&1")
+end
+vim.keymap.set("n", "<leader>gg", EZlaunch, {})
