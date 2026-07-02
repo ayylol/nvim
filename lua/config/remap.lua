@@ -94,8 +94,11 @@ vim.keymap.set("n", "<leader>rs", ":lsp restart<CR>", opts) -- mapping to restar
 
 -- Autorun go.sh
 -- TODO: Assumes nvim is in the dir with go.sh, do something to look up dirs
+-- TODO: pipe output to a log file
 function EZlaunch()
   local cwd = vim.fn.getcwd(0)
-  os.execute(cwd.."/go.sh > /dev/null 2>&1")
+  if (os.execute(cwd.."/go.sh > /dev/null 2>&1")~=0) then
+    vim.notify("RUN FAILED!", vim.log.levels.ERROR)
+  end
 end
 vim.keymap.set("n", "<leader>gg", EZlaunch, {})
