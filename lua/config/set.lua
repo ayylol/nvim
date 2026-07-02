@@ -75,12 +75,12 @@ orgmode.setup({
 })
 
 
--- Telescope startup
+--Telescope startup
 local telescope = require('telescope')
 telescope.setup({
   defaults = { },
 })
-if (os.execute('which fzf') == 0)
+if (os.execute('which fzf > /dev/null 2>&1') == 0)
 then
   telescope.load_extension('fzf')
 end

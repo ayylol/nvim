@@ -97,7 +97,7 @@ vim.keymap.set("n", "<leader>rs", ":lsp restart<CR>", opts) -- mapping to restar
 -- TODO: pipe output to a log file
 function EZlaunch()
   local cwd = vim.fn.getcwd(0)
-  if (os.execute(cwd.."/go.sh > /dev/null 2>&1")~=0) then
+  if (os.execute(cwd.."/go.sh > ./log.txt 2>&1")~=0) then
     vim.notify("RUN FAILED!", vim.log.levels.ERROR)
   end
 end
