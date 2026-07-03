@@ -2,7 +2,7 @@ vim.opt.number=true
 vim.opt.relativenumber=true
 
 vim.opt.scrolloff=8
-vim.opt.colorcolumn="100"
+--vim.opt.colorcolumn="100"
 vim.opt.incsearch=true
 vim.opt.cursorline=true
 vim.wo.signcolumn="no"
