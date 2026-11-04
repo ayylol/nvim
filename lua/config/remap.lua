@@ -58,9 +58,12 @@ vim.keymap.set("n", "<leader>p", "o<esc>\"+p")
 vim.keymap.set("v", "<leader>p", "o<esc>\"+p")
 vim.keymap.set("n", "<leader>P", "o<esc>\"+P")
 
+-- Clang format selection
 vim.keymap.set("v", "<leader>aa", "\"zy:let @z=system(\"clang-format\",@z)<CR>gv\"zp")
-
+-- Search selection
 vim.keymap.set("v", "<leader>ss", "mz\"zy:silent g `<C-r>z<CR>'z")
+-- Remove trailing whitespace
+vim.keymap.set('n', '<leader>tw', [[:%s/\s\+$//e<cr>]])
 
 -- netrw
 vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
